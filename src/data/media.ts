@@ -70,6 +70,10 @@ export type MediaKey =
   | "portfolio-02"
   | "portfolio-03"
   | "portfolio-04"
+    | "portfolio-05"
+    | "portfolio-06"
+    | "portfolio-07"
+| "testimonial-01"
   | "frame-01"
   | "frame-02"
   | "frame-03"
@@ -112,6 +116,10 @@ export const media: Record<MediaKey, Media> = {
   "wedding-06": {
     src: unsplash("photo-1610030469983-98e550d6193c", 1400),
     alt: "A South Indian bride in a red and gold saree framed by jasmine garlands",
+  },
+  "testimonial-01": {
+    src: "/IMG_8115.jpeg",
+    alt: "A bride and groom standing near the beach",
   },
   "couple-01": {
     src: unsplash("photo-1522673607200-164d1b6ce486", 1400),
@@ -163,19 +171,19 @@ export const media: Record<MediaKey, Media> = {
   },
   "album-01": {
     src: unsplash("photo-1519741497674-611481863552", 1200),
-    alt: "A linen-bound wedding album open to a full-bleed spread",
+    alt: "A bride and groom walking together beneath a canopy of marigolds",
   },
   "album-02": {
     src: unsplash("photo-1522673607200-164d1b6ce486", 1200),
-    alt: "Hands turning the pages of a handcrafted wedding album",
+    alt: "A couple walking hand in hand along a quiet beach at dusk",
   },
   "album-03": {
     src: unsplash("photo-1537633552985-df8429e8048b", 1200),
-    alt: "A stack of cloth-bound albums with gold foil lettering",
+    alt: "A couple laughing together against a wall of monsoon green",
   },
   "film-poster": {
     src: "/cta/IMG_8131.jpg",
-    alt: "A newly married couple silhouetted against a golden backwater sunset",
+    alt: "A newly married couple in white, held close in bright daylight",
   },
   "film-mp4": {
     src: "https://res.cloudinary.com/demo/video/upload/dog.mp4",
@@ -187,15 +195,15 @@ export const media: Record<MediaKey, Media> = {
   },
   "highlight-01": {
     src: "/highlight/IMG_8134.JPG.jpg",
-    alt: "Ananya and Arjun in white, embracing on the lawn beside the Kumarakom backwaters",
+    alt: "A couple in white embracing on a lawn beside the backwaters",
   },
   "highlight-02": {
     src: "/highlight/DSC09480.webp",
-    alt: "Diya and Akash smiling together under blossom trees in Goa",
+    alt: "A couple smiling together under blossom trees",
   },
   "highlight-03": {
     src: "/highlight/DSC07291.webp",
-    alt: "Meera and Adam in a black tuxedo and lace gown by a window in Fort Kochi",
+    alt: "A couple in black tie and a lace gown by a window",
   },
   "philosophy-01": {
     src: "/philosophy/DSC05443.webp",
@@ -215,61 +223,74 @@ export const media: Record<MediaKey, Media> = {
   },
   "selected-01": {
     src: "/selected/01.webp",
-    alt: "A couple exchange garlands during a sunlit Kerala wedding ceremony",
+    alt: "A couple in black-tie standing together beside a tall window",
   },
   "selected-02": {
     src: "/selected/02.webp",
-    alt: "A couple walking hand in hand along a quiet beach at dusk",
+    alt: "A couple in evening wear walking a paved promenade at dusk",
   },
   "selected-03": {
     src: "/selected/03.webp",
-    alt: "A South Indian bride in a red and gold saree framed by jasmine garlands",
+    alt: "A couple in white walking together across open sand",
   },
   "selected-04": {
     src: "/selected/04.jpg",
-    alt: "A groom lifts his bride as the sun sets behind a palm grove",
+    alt: "A bride in a floral gown standing with her groom beneath a lace parasol",
   },
   "featured-01": {
     src: "/featured/web/featured-01.jpg",
-    alt: "Ananya and Arjun on the houseboat where they first met in Kumarakom",
+    alt: "A couple at the water's edge on the morning of their wedding",
   },
   "featured-02": {
     src: "/featured/web/featured-02.jpg",
-    alt: "Jasmine, gold and morning calm before the Kerala wedding ceremony",
+    alt: "Two hands clasped, a ring and bangles against the sea",
   },
   "featured-03": {
     src: "/featured/web/featured-03.jpg",
-    alt: "Family gathered under the pandal during the wedding rituals",
+    alt: "A couple holding each other on the sand beneath an overcast sky",
   },
   "featured-04": {
     src: "/featured/web/featured-04.jpg",
-    alt: "Ananya and Arjun walking alone together after the rituals",
+    alt: "A couple on a clifftop terrace, hands raised, above the ocean",
   },
   "featured-05": {
     src: "/featured/web/featured-05.jpg",
-    alt: "Ananya and Arjun in the last light of the Kumarakom backwaters",
+    alt: "A couple seated together on the sand beneath a red cliff",
   },
   "sequence-01": {
     src: "/featured/wide/web/sequence-01.jpg",
-    alt: "Ananya and Arjun embracing on a high terrace above the sea in Kerala",
+    alt: "A couple embracing above the sea",
   },
   "sequence-02": {
     src: "/featured/wide/web/sequence-02.jpg",
-    alt: "Ananya and Arjun holding each other on a clifftop terrace overlooking the ocean",
+    alt: "A couple holding each other on a clifftop overlooking the ocean",
   },
   "portfolio-01": {
-    src: "/work/portfolio/DSC01578.JPG_resized.jpg",
-    alt: "A groom in a white kurta and mundu beside his bride in a red silk saree against a wall of tropical greenery",
+    src: "/work/portfolio/DSC06649.webp",
+    alt: "A bride in a white lace gown seated beside a friend in pink, holding her bouquet on a patterned tile floor",
   },
   "portfolio-02": {
-    src: "/work/portfolio/IMG_8120.JPG.jpeg",
-    alt: "A couple in white laughing as they run hand in hand through the shallows of a palm-fringed beach",
+    src: "/work/portfolio/DSC09201.webp",
+    alt: "A couple in rust-toned outfits walking hand in hand down wooden steps beside a pool",
   },
   "portfolio-03": {
+    // src: "/work/portfolio/DSC06649.webp",
     src: "/work/portfolio/DSC06649.webp",
-    alt: "A bride in a white lace gown holding her bouquet beside a friend in a blush pink lehenga",
+    alt: "A bride in a white lace gown seated beside a friend in pink, holding her bouquet on a patterned tile floor",
   },
   "portfolio-04": {
+    src: "/work/portfolio/IMG_7962.jpg",
+    alt: "A bride in an embroidered floral gown leaning on a white stair railing, seen through a doorway",
+  },
+  "portfolio-05": {
+    src: "/work/portfolio/DSC09201.webp",
+    alt: "A couple in rust-toned outfits walking hand in hand down wooden steps beside a pool",
+  },
+  "portfolio-06": {
+    src: "/work/portfolio/IMG_8120.jpeg",
+    alt: "A couple in white spinning together at the water's edge beneath a red-earth cliff",
+  },
+  "portfolio-07": {
     src: "/work/portfolio/IMG_7962.jpg",
     alt: "A bride in an embroidered floral gown leaning on a white stair railing, seen through a doorway",
   },
@@ -347,6 +368,6 @@ export const media: Record<MediaKey, Media> = {
   },
   "og-image": {
     src: `${unsplash("photo-1519741497674-611481863552", 1200)}&h=630`,
-    alt: "Vow & Frame — wedding photography and films in Kerala",
+    alt: "Shortlight Weddings — wedding photography and films in Kerala",
   },
 };

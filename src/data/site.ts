@@ -17,6 +17,7 @@ export type Story = {
   location: string;
   detail: string;
   imageKey: MediaKey;
+  imageKey1: MediaKey;
 };
 
 export type StoryBeat = {
@@ -86,7 +87,7 @@ export const services: Service[] = [
   },
   {
     name: "Albums",
-    line: "Handcrafted, linen-bound books designed to be held, not streamed.",
+    line: "Laser-printed albums, designed to be held, not streamed.",
     imageKey: "album-01",
   },
   {
@@ -98,62 +99,66 @@ export const services: Service[] = [
 
 export const stories: Story[] = [
   {
-    slug: "ananya-arjun",
-    couple: "Ananya & Arjun",
-    location: "Kumarakom · Kerala",
-    detail: "Backwater Wedding",
+    slug: "classic-wedding",
+    couple: "The Garden Wedding",
+    location: "Kerala",
+    detail: "Classic Wedding",
     imageKey: "portfolio-01",
+    imageKey1: "portfolio-01",
   },
   {
-    slug: "meera-adam",
-    couple: "Meera & Adam",
-    location: "Fort Kochi",
-    detail: "Two Coasts, One Vow",
+    slug: "post-wedding",
+    couple: "The Day After",
+    location: "Kerala",
+    detail: "Post Wedding",
     imageKey: "portfolio-03",
+    imageKey1: "portfolio-05",
   },
   {
-    slug: "nisha-rohan",
-    couple: "Nisha & Rohan",
-    location: "Bengaluru",
-    detail: "A City Wedding",
+    slug: "seaside-vows",
+    couple: "Vows by the Sea",
+    location: "Kerala Coast",
+    detail: "Beach Wedding",
     imageKey: "portfolio-04",
+    imageKey1: "portfolio-06",
   },
   {
-    slug: "diya-akash",
-    couple: "Diya & Akash",
-    location: "Goa",
-    detail: "Vows by the Sea",
+    slug: "city-wedding",
+    couple: "A City Celebration",
+    location: "Kochi",
+    detail: "City Wedding",
     imageKey: "portfolio-02",
+    imageKey1: "portfolio-07",
   },
 ];
 
 export const featuredStory = {
-  couple: "Ananya + Arjun",
-  location: "Kumarakom · Kerala",
+  couple: "A Wedding by the Water",
+  location: "Kerala",
   beats: [
     {
       imageKey: "featured-01",
-      line: "They met on a houseboat that neither of them wanted to board.",
+      line: "The morning began by the water, unhurried and easy.",
       tone: "light",
     },
     {
       imageKey: "featured-02",
-      line: "The morning was jasmine, gold, and borrowed calm.",
+      line: "Two hands held, a ring catching the light.",
       tone: "light",
     },
     {
       imageKey: "featured-03",
-      line: "Under the pandal, the room held its breath at once.",
-      tone: "dark",
+      line: "They held each other as the sea kept time.",
+      tone: "light",
     },
     {
       imageKey: "featured-04",
-      line: "After the rituals, a walk to the water — no one else.",
-      tone: "dark",
+      line: "Alone on the terrace, the ocean at their backs.",
+      tone: "light",
     },
     {
       imageKey: "featured-05",
-      line: "The last light came, and stayed a little longer than it should have.",
+      line: "The light stayed soft, and the day held on a little longer.",
       tone: "light",
     },
   ] satisfies StoryBeat[],
@@ -161,20 +166,20 @@ export const featuredStory = {
 
 export const films: Film[] = [
   {
-    title: "Ananya + Arjun",
-    location: "Kumarakom · Kerala",
+    title: "Vows by the Sea",
+    location: "Kerala Coast",
     posterKey: "highlight-01",
     videoKey: "film-mp4",
   },
   {
-    title: "Diya + Akash",
-    location: "Goa",
+    title: "The Celebration",
+    location: "Kerala",
     posterKey: "highlight-02",
     videoKey: "film-mp4",
   },
   {
-    title: "Meera + Adam",
-    location: "Fort Kochi",
+    title: "A Wedding Day",
+    location: "Kerala",
     posterKey: "highlight-03",
     videoKey: "film-mp4",
   },
@@ -184,8 +189,8 @@ export const testimonials: Testimonial[] = [
   {
     quote:
       "They never asked us to perform. They waited, and somehow every real thing happened in front of them.",
-    attribution: "Ananya & Arjun · Kumarakom",
-    imageKey: "couple-02",
+    attribution: "Halwin & Agnes · Varkala",
+    imageKey: "testimonial-01",
   },
   {
     quote:
@@ -197,19 +202,19 @@ export const testimonials: Testimonial[] = [
 
 export const philosophy = {
   headline: ["We don't just photograph weddings.", "We photograph how they felt."],
-  line: "The glance before the garland. The uncle crying into his coffee. The three seconds of quiet before the doors open.",
+  line: "The look a mother gives her daughter before the doors open — and the quiet just after.",
   imageKey: "philosophy-01" as MediaKey,
 };
 
 export const albums = {
   heading: "The story doesn't end on a screen.",
-  line: "Each wedding is designed into a handcrafted album — printed, bound, and made to be passed around a table.",
+  line: "Each wedding is designed into a laser-printed album — printed with care, and made to be passed around a table.",
   imageKeys: ["album-shot-01", "album-shot-02", "album-shot-03"] as MediaKey[],
 };
 
 export const journal = {
   heading: "From the frame",
-  handle: "@vowandframe",
+  handle: "@shortlight_weddings",
   imageKeys: [
     "wedding-02",
     "details-02",
@@ -232,5 +237,5 @@ export const contact = {
 export const seo = {
   title: "Shortlight Weddings | Wedding Photography & Films in Kerala",
   description:
-    "Shortlight Weddings creates cinematic wedding photography, wedding films and handcrafted albums in Kerala and across India.",
+    "Shortlight Weddings creates cinematic wedding photography, wedding films and laser-printed albums in Kerala and across India.",
 } as const;

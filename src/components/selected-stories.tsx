@@ -29,7 +29,7 @@ export function SelectedStories() {
             const image = media[IMAGE_KEYS[index % IMAGE_KEYS.length]];
             return (
               <Reveal key={story.slug} delay={index * 0.08} y={30}>
-                <Link href="/work/" className="group block">
+                <div  className="group block">
                   <div className="relative aspect-9/13 overflow-hidden bg-beige/40">
                     <Image
                       src={image.src}
@@ -38,14 +38,14 @@ export function SelectedStories() {
                       sizes="(max-width: 640px) 100vw, 50vw"
                       className="object-cover transition-transform duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
                     />
-                    <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 via-ink/25 to-transparent p-5 sm:p-6">
-                      <p className="font-serif text-xl text-ivory sm:text-2xl">{story.couple}</p>
-                      <p className="mt-1 text-[0.6875rem] uppercase tracking-[0.22em] text-ivory/70">
-                        {story.location} · {story.detail}
-                      </p>
-                    </div>
+                    {/*<div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 via-ink/25 to-transparent p-5 sm:p-6">*/}
+                    {/*  <p className="font-serif text-xl text-ivory sm:text-2xl">{story.couple}</p>*/}
+                    {/*  <p className="mt-1 text-[0.6875rem] uppercase tracking-[0.22em] text-ivory/70">*/}
+                    {/*    {story.location} · {story.detail}*/}
+                    {/*  </p>*/}
+                    {/*</div>*/}
                   </div>
-                </Link>
+                </div>
               </Reveal>
             );
           })}

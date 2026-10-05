@@ -34,7 +34,7 @@ export function Philosophy() {
           <MaskText
             as="h2"
             lines={philosophy.headline}
-            className="max-w-5xl font-serif text-[clamp(2.4rem,6.5vw,5.5rem)] leading-[0.98]"
+            className="max-w-5xl font-serif text-[clamp(2.4rem,6.5vw,5.5rem)] leading-[1.14]"
           />
           <Reveal delay={0.25} className="mt-8">
             <span className="eyebrow inline-flex items-center gap-3 text-ivory/60">

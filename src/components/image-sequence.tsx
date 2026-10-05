@@ -34,8 +34,8 @@ export function ImageSequence() {
 
       tl.fromTo(
         frameRef.current,
-        { clipPath: "inset(21% 8% 21% 8%)" },
-        { clipPath: "inset(0% 0% 0% 0%)", ease: "none", duration: 1 },
+        { scale: 1.16, opacity: 0.45 },
+        { scale: 1, opacity: 1, ease: "none", duration: 1 },
       )
         .to(captionRef.current, { opacity: 0, y: -36, ease: "none", duration: 0.28 }, 0.06)
         .to(secondRef.current, { opacity: 1, ease: "none", duration: 0.35 }, 0.72);
@@ -48,8 +48,12 @@ export function ImageSequence() {
     <section ref={sectionRef} className="relative h-[100svh] overflow-hidden bg-ink">
       <div
         ref={frameRef}
-        className="absolute inset-0 [clip-path:inset(21%_8%_21%_8%)] will-change-[clip-path] max-[400px]:[clip-path:inset(28%_8%_28%_8%)]"
-        style={reduced ? { clipPath: "inset(0% 0% 0% 0%)" } : undefined}
+        className="absolute inset-0 [backface-visibility:hidden] [will-change:transform,opacity]"
+        style={
+          reduced
+            ? undefined
+            : { transform: "scale(1.16)", opacity: 0.45 }
+        }
       >
         <Image
           src={media[FIRST].src}
@@ -79,7 +83,7 @@ export function ImageSequence() {
         className="absolute inset-x-0 bottom-0 z-10 flex flex-col items-center px-6 pb-10 text-center text-ivory sm:pb-16"
       >
         <p className="max-w-full font-serif text-[clamp(1.3rem,3vw,2.6rem)] leading-tight">
-          The moment the room disappears.
+          The moment the world falls away.
         </p>
         <p className="eyebrow mt-4 text-ivory/60">And only the two of you remain</p>
       </div>

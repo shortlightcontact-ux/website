@@ -56,7 +56,7 @@ export function Masonry({
           image.width && image.height ? `${image.width} / ${image.height}` : null;
         return (
           <div key={item.id} className="mb-4 break-inside-avoid lg:mb-6">
-            <Reveal y={28}>
+            <Reveal fadeOnly>
               <MasonryTile
                 item={item}
                 ratio={item.aspectClass ? null : naturalRatio}

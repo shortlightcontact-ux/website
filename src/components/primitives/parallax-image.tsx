@@ -45,7 +45,7 @@ export function ParallaxImage({
       className={`${hasPosition ? "" : "relative"} overflow-hidden ${className ?? ""}`}
     >
       <motion.div
-        className="absolute -inset-[12%]"
+        className="absolute -inset-[12%] [backface-visibility:hidden] [will-change:transform]"
         style={reduced ? undefined : { y }}
       >
         <Image

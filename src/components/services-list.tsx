@@ -80,20 +80,22 @@ export function ServicesList() {
                   {expanded === index ? (
                     <motion.div
                       key="image"
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
+                      initial={{ gridTemplateRows: "0fr", opacity: 0 }}
+                      animate={{ gridTemplateRows: "1fr", opacity: 1 }}
+                      exit={{ gridTemplateRows: "0fr", opacity: 0 }}
                       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                      className="overflow-hidden lg:hidden"
+                      className="grid overflow-hidden lg:hidden"
                     >
-                      <div className="relative mx-2 mb-8 aspect-[4/3] overflow-hidden lg:mx-4">
-                        <Image
-                          src={media[service.imageKey].src}
-                          alt={media[service.imageKey].alt}
-                          fill
-                          sizes="100vw"
-                          className="object-cover"
-                        />
+                      <div className="min-h-0">
+                        <div className="relative mx-2 mb-8 aspect-[4/3] overflow-hidden lg:mx-4">
+                          <Image
+                            src={media[service.imageKey].src}
+                            alt={media[service.imageKey].alt}
+                            fill
+                            sizes="100vw"
+                            className="object-cover"
+                          />
+                        </div>
                       </div>
                     </motion.div>
                   ) : null}
@@ -108,7 +110,7 @@ export function ServicesList() {
               style={{ x: springX, y: springY }}
               animate={{ opacity: showPreview ? 1 : 0 }}
               transition={{ duration: showPreview ? 0.35 : 0.16, ease: [0.22, 1, 0.36, 1] }}
-              className="pointer-events-none absolute left-0 top-0 z-10 hidden lg:block"
+              className="pointer-events-none absolute left-0 top-0 z-10 hidden [will-change:transform,opacity] lg:block"
             >
               {/* Static wrapper: negative margins centre the preview without
                   competing with Framer's inline transform. */}

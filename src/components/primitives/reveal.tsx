@@ -12,6 +12,12 @@ type RevealProps = {
   delay?: number;
   y?: number;
   once?: boolean;
+  /**
+   * Fade only — skip the transform. Use inside CSS multi-column layouts: a
+   * transformed child forces the browser to repaint the whole column, so a
+   * plain opacity fade is far cheaper there.
+   */
+  fadeOnly?: boolean;
 };
 
 export function Reveal({
@@ -20,6 +26,7 @@ export function Reveal({
   delay = 0,
   y = 28,
   once = true,
+  fadeOnly = false,
 }: RevealProps) {
   const reduced = usePrefersReducedMotion();
 
@@ -27,7 +34,11 @@ export function Reveal({
     <motion.div
       data-reveal
       className={className}
-      initial={reduced ? false : { opacity: 0, y }}
+      // Promote once and keep it: toggling `will-change` off at the end of the
+      // tween re-rasterizes the text (a visible subpixel nudge), while never
+      // promoting it leaves the transform animating on the main thread (lag).
+      style={reduced ? undefined : { willChange: "transform, opacity" }}
+      initial={reduced ? false : { opacity: 0, y: fadeOnly ? 0 : y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once, margin: "-12% 0px -12% 0px" }}
       transition={{ duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] }}

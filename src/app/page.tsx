@@ -1,4 +1,4 @@
-import { Albums } from "@/components/albums";
+// import { Albums } from "@/components/albums";
 import { ContactForm } from "@/components/contact-form";
 import { DeferredFeaturedStory, DeferredImageSequence } from "@/components/deferred";
 import { FilmSection } from "@/components/film-section";
@@ -22,7 +22,7 @@ export default function Home() {
       <HighlightFilms />
       <Philosophy />
       <ServicesList />
-      <Albums />
+      {/*<Albums />*/}
       <Testimonials />
       {/*<VisualJournal />*/}
       <ContactForm />

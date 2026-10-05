@@ -38,7 +38,7 @@ export function Nav() {
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
         overHero
           ? "border-b border-transparent text-ivory"
-          : "border-b border-charcoal/10 bg-ivory/90 text-charcoal backdrop-blur-md"
+          : "border-b border-charcoal/10 bg-ivory/95 text-charcoal"
       }`}
     >
       <nav

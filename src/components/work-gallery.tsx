@@ -38,8 +38,8 @@ export function WorkGallery() {
           <SectionHeader as="h1" label="Portfolio" title="Work" />
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-xl text-base text-charcoal/70">
-              A selection of complete stories — ceremonies, coastlines, and the quiet hours in
-              between. Every wedding below was photographed and filmed by the two of us.
+              A selection of weddings — ceremonies, coastlines, and the quiet hours in
+              between. Every media below was photographed and filmed by Shortlight Weddings.
             </p>
           </Reveal>
         </div>
@@ -48,7 +48,7 @@ export function WorkGallery() {
       <div className="mx-auto max-w-[110rem] px-5 pb-20 sm:px-8 lg:px-12 lg:pb-28">
         <div className="grid gap-x-6 gap-y-10 sm:grid-cols-2 xl:grid-cols-4">
           {stories.map((story, index) => {
-            const image = media[story.imageKey];
+            const image = media[story.imageKey1];
             return (
               <Reveal key={story.slug} delay={index * 0.06} y={30}>
                 <article className="group">

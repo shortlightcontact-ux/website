@@ -30,8 +30,8 @@ export function Hero() {
       className="relative flex h-[100svh] min-h-[38rem] flex-col justify-end overflow-hidden bg-ink text-ivory"
     >
       <motion.div
-        className="absolute inset-0"
-        style={reduced ? undefined : { scale: imageScale, y: imageY }}
+        className="absolute inset-0 [backface-visibility:hidden]"
+        style={reduced ? undefined : { scale: imageScale, y: imageY, willChange: "transform" }}
       >
         <motion.div
           data-reveal
@@ -66,7 +66,7 @@ export function Hero() {
       />
 
       <motion.div
-        className="relative z-10 mx-auto w-full max-w-[110rem] px-5 pb-16 sm:px-8 lg:px-12 lg:pb-24"
+        className="relative z-10 mx-auto w-full max-w-[110rem] px-5 pb-16 sm:px-8 lg:px-12 lg:pb-24 [will-change:transform,opacity]"
         style={reduced ? undefined : { y: contentY, opacity: contentOpacity }}
       >
         <motion.p
